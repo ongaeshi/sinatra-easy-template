@@ -69,9 +69,21 @@ header {
   }
 }
 
+aside {
+  float: right;
+  margin-left: 10px;
+  width: 203px;
+
+  .link {
+    padding: 12px 6px 12px 52px;
+    background: url(/images/bullet.gif) no-repeat left;
+    border-bottom: 1px dashed #a7a7a7;
+  }
+}
+
 section {
 /*   @include box-shadow(0.2em 0.2em 0.2em gray); */
-  clear: both;
+/*   clear: both; */
   margin: 0 1em;
   padding-bottom: 0.5em;
 
