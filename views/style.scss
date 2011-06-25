@@ -36,6 +36,37 @@ header {
     @include box-flex(1);
     margin-left: 1.5em;
   }
+  nav {
+    position: relative;
+    top: 160px;
+    margin-left: 200px;
+    padding: 11px 0;
+    border-bottom: 1px dashed #b1ad9b;
+    ul {
+      list-style-type: none;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      padding-bottom: 5px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 5px;
+      text-align: center;
+      li {
+        padding: 6px 15px;
+        margin: 0 7.5px;
+        display: -moz-inline-box;
+        -moz-box-orient: vertical;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        font: 14px Georgia, Garamond, Times, "Times New Roman", serif;
+        border: 1px solid #cacaca;
+        border-bottom: 3px solid #a0a0a0;
+      }
+    }
+  }
 }
 
 section {
