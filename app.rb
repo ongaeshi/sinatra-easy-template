@@ -12,8 +12,7 @@ require 'haml'
 $LOAD_PATH.unshift 'lib'
 require 'haml/filters/blockcode'
 
-set :app_file, __FILE__
-set :haml, :format => :html5, :escape_html => true
+set :haml, :format => :html5
 
 helpers do
   alias h escape_html
@@ -28,7 +27,7 @@ get '/*.css' do |path|
   sass path.to_sym, :sass => {:load_paths => [options.views]}
 end
 
-get '/*' do |path|
+get '/*.html' do |path|
   pass unless File.exist?(File.join(options.views, "#{path}.haml"))
   haml path.to_sym
 end
