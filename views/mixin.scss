@@ -1,0 +1,67 @@
+/* 角丸表示 */
+@mixin border-radius($length) {
+  border-radius: $length;
+  -webkit-border-radius: $length;
+  -moz-border-radius: $length;
+}
+
+@mixin transform($function) {
+  transform: $function;
+  -webkit-transform: $function;
+  -moz-transform: $function;
+}
+
+/* 自動的に横並びになり、かつ最大の高さを持つ要素に高さを揃える */
+@mixin display-box {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+}
+
+@mixin box-flex($n) {
+  box-flex: $n;
+  -webkit-box-flex: $n;
+  -moz-box-flex: $n; 
+}
+
+/* ボックス内の子要素の縦方向の揃え位置を指定 */
+@mixin box-align($val) {
+  box-align: $val;
+  -webkit-box-align: $val;
+  -moz-box-align: $val;
+}
+
+@mixin box-pack($val) {
+  box-pack: $val;
+  -webkit-box-pack: $val;
+  -moz-box-pack: $val;
+}
+
+@mixin column-count($n) {
+  column-count: $n;
+  -webkit-column-count: $n;
+  -moz-column-count: $n;
+}
+
+@mixin box-shadow($vals) {
+  box-shadow: $vals;
+  -webkit-box-shadow: $vals;
+  -moz-box-shadow: $vals;
+}
+
+@mixin box-sizing($val) {
+  box-sizing: $val;
+  -webkit-box-sizing: $val;
+  -moz-box-sizing: $val;
+  -ms-box-sizing: $val; 
+}
+
+/* 回り込み解除 */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
