@@ -1,3 +1,45 @@
 @import "html5_compat";
 @import "css3_compat";
 
+body {
+  max-width: 60em;
+  margin: auto;
+  line-height: 1.5;
+}
+
+header {
+  @include display-box;
+  @include box-align(center);
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: {
+    width: 1px;
+    style: solid;
+    color: #888888;
+  };
+  * { margin: 0; }
+  h1 {
+    @include border-radius(20px);
+    @include box-shadow(3px 3px 2px #888888);
+    background: {
+      image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#8e8e8e));
+      image: -moz-linear-gradient(top, #ffffff, #8e8e8e);
+      color: #ffffff;
+    };
+    font: {
+      family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
+      size: 2.8em;
+    };
+    line-height: 1.1;
+    border: 1px solid #000000;
+    text-shadow: #f0f0f0f 1px 1px 1px;
+    padding: 0.5em;
+    strong {
+      color: white;
+    }
+  }
+  p {
+    @include box-flex(1);
+    margin-left: 1.5em;
+  }
+}
