@@ -35,3 +35,7 @@ get '/*' do |path|
   pass unless File.exist?(File.join(options.views, "#{path}.haml"))
   haml path.to_sym
 end
+
+get '/hello' do |path|
+  "Hello, World !!"
+end

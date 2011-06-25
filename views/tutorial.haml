@@ -1,0 +1,81 @@
+%section
+  %h2 #{h '<p>'}
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+%section
+  %h2 #{h '<ul>, <ol>'}
+  %p Programming language
+  %ul
+    %li ruby
+    %li perl
+    %li C++
+    %li Javascript
+    %li ....
+  %p WBC2009(JPN)
+  %ol
+    %li Ichiro
+    %li Nakajima
+    %li Aoki
+    %li Inaba
+    %li Murata
+    %li ....
+
+%section
+  %h2 #{h '<pre>'}
+
+  :blockcode
+    require 'rubygems'
+    require 'sinatra'
+    require 'haml'
+    
+    helpers do
+      alias h escape_html
+    end
+
+    get '/' do
+      haml :index
+    end
+    
+  %pre.shell
+    :preserve
+      $ rails hello_haml
+      $ cd hello_haml
+      $ haml --rails .
+      Haml plugin added to .
+
+%section
+  %h2 .side-by-side
+  .side-by-side
+    :ruby
+      example = <<-HAML
+      !!!
+      
+      %html(lang='ja')
+        %head
+          %meta(charset='utf-8')
+            %title= [@page_title, 'Sinatra App Template'].compact.join(' - ')
+            %link(rel='stylesheet' type='text/css'){:href => @stylesheet || 'style.css'}
+        %body
+          %header
+            %h1 Sinatra-app
+            %p Sinatra-app is minimum app template.
+      HAML
+
+    :blockcode
+      #{example}
+
+    :blockcode
+      #{Haml::Engine.new(example, :format => :html5).render}
+
+%section
+  %h2 .note
+  %p.note Notes are the <strong>atoms</strong> of much Western music: discretizations of musical phenomena that facilitate performance, comprehension, and analysis. (<a href="http://en.wikipedia.org/wiki/Note">Note - Wikipedia, the free encyclopedia</a>)
+
+%section
+  %h2 #{h '<dl>, <dt>, <dd>'}
+  %dl
+    %dt <a href="http://www.sinatrarb.com/">Sinatra</a>
+    %dd Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort: 
+  %dl
+    %dt <a href="http://haml-lang.com/">#haml</a>
+    %dd Haml is a markup language that’s used to cleanly and simply describe the HTML of any web document without the use of inline code.
