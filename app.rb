@@ -24,11 +24,14 @@ end
 
 get '/*.css' do |path|
   scss path.to_sym
-#   content_type 'text/css'
-#   sass path.to_sym, :sass => {:load_paths => [options.views]}
 end
 
 get '/*.html' do |path|
+  pass unless File.exist?(File.join(options.views, "#{path}.haml"))
+  haml path.to_sym
+end
+
+get '/*' do |path|
   pass unless File.exist?(File.join(options.views, "#{path}.haml"))
   haml path.to_sym
 end
