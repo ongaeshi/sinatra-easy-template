@@ -9,12 +9,13 @@
   %body
     %header
       %h1 ページタイトル
-      %p Sinatra-appは、Sinatraを使ったアプリを簡単に書くための簡易テンプレートです。
+      %p Sinatra-appは、Sinatraを使ってWebアプリやホームページを<br>簡単に作るためのテンプレートです。
 
     != yield
 
+    %hr
     %footer
       %p
-        ! Develop by ongaeshi
+        ! Develop by <a href="http://ongaeshi.me/">ongaeshi</a>
         ! Powered by <a href="http://www.ruby-lang.org/">Ruby</a> #{::RUBY_VERSION},
         ! <a href="http://www.sinatrarb.com/">Sinatra</a> #{Sinatra::VERSION}
