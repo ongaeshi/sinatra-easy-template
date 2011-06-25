@@ -197,5 +197,11 @@ footer {
   * { margin: 0; }
   li { display: inline-block; }
   a { color: inherit; }
+  p {
+    margin: {
+        top: 1em;
+        bottom: 1em;
+    };
+  }
 }
 
