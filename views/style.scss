@@ -1,5 +1,8 @@
-@import "html5_compat";
-@import "css3_compat";
+@import "mixin";
+
+section, article, aside, header, footer, nav {
+  display: block;
+}
 
 body {
   max-width: 60em;
@@ -128,4 +131,16 @@ section {
   }
 }
 
+footer {
+  text-align: right;
+  font-size: small;
+  color: gray;
+  margin: {
+      top: 3em;
+      bottom: 1em;
+  };
+  * { margin: 0; }
+  li { display: inline-block; }
+  a { color: inherit; }
+}
 
