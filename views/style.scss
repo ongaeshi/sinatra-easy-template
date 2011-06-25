@@ -14,12 +14,12 @@ header {
   @include display-box;
   @include box-align(center);
   margin-top: 1em;
-  padding-bottom: 1em;
-  border-bottom: {
-    width: 1px;
-    style: solid;
-    color: #888888;
-  };
+  padding-bottom: 0.5em;
+/*   border-bottom: { */
+/*     width: 1px; */
+/*     style: solid; */
+/*     color: #888888; */
+/*   }; */
   * { margin: 0; }
   h1 {
     @include border-radius(20px);
@@ -107,7 +107,7 @@ section {
     pre.shell {
       margin-right: 0em; }
     &:before {
-      content: "注記:";
+      content: "Note:";
       display: block;
       font-weight: bold; }
     *:first-child {
