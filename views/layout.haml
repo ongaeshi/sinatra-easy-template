@@ -1,0 +1,20 @@
+!!!
+
+%html(lang='ja')
+  %head
+    %meta(charset='utf-8')
+    %title= [@page_title, 'Sinatra App Template'].compact.join(' - ')
+    %link(rel='stylesheet' type='text/css'){:href => @stylesheet || 'layout.css'}
+
+  %body
+    %header
+      %h1 ページタイトル
+      %p このページの説明
+
+    != yield
+
+    %footer
+      %p
+        ! Develop by ongaeshi
+        ! Powered by <a href="http://www.ruby-lang.org/">Ruby</a> #{::RUBY_VERSION},
+        ! <a href="http://www.sinatrarb.com/">Sinatra</a> #{Sinatra::VERSION}

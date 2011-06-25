@@ -1,0 +1,61 @@
+- @stylesheet = 'index.css'
+
+%section
+  %h2 セクション1
+  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+%section
+  %h2 セクション2
+  %p リストです
+  %ul.links
+    %li リスト要素1
+    %li リスト要素2
+    %li リスト要素3
+    %li ....
+
+%section
+  %h2 rubyコードも実行出来る
+  .side-by-side
+    :ruby
+      example = <<-HAML
+      !!!
+      %html
+        %head
+          %title Hello, Haml!
+        %body
+          #header
+            %h1 Hello, Haml!
+          #content
+            %p
+              I use Haml
+              %span.version= Haml::VERSION
+      HAML
+
+    :blockcode
+      #{example}
+
+    :blockcode
+      #{Haml::Engine.new(example, :format => :html5).render}
+
+%section
+  %h2 更新履歴
+  %dl
+    %dt 2011/06/26
+    %dd 第１版公開
+
+    %dt 2011/06/25
+    %dd ページ作成
+
+%section
+  %h2 Sinatra-app を使っているサイト
+  %ul
+    %li Comming soon !!
+
+%section
+  %h2 リンク集
+  %dl
+    %dt <a href="http://www.sinatrarb.com/">Sinatra</a>
+    %dd SinatraはRubyで作られた、簡単にWebアプリを作るためのフレームワークです。
+  %dl
+    %dt <a href="http://haml-lang.com/">#haml</a>
+    %dd HamlはHTMLを美しく整形された形で記述するたえのマークアップ言語です。

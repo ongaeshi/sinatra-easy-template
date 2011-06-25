@@ -23,8 +23,9 @@ get '/' do
 end
 
 get '/*.css' do |path|
-  content_type 'text/css'
-  sass path.to_sym, :sass => {:load_paths => [options.views]}
+  scss path.to_sym
+#   content_type 'text/css'
+#   sass path.to_sym, :sass => {:load_paths => [options.views]}
 end
 
 get '/*.html' do |path|
