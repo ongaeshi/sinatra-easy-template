@@ -1,0 +1,47 @@
+/* span */
+@mixin span-1 { width: 30px; }
+@mixin span-2 { width: 70px; }
+@mixin span-3 { width: 110px; }
+@mixin span-4 { width: 150px; }
+@mixin span-5 { width: 190px; }
+@mixin span-6 { width: 230px; }
+@mixin span-7 { width: 270px; }
+@mixin span-8 { width: 310px; }
+@mixin span-9 { width: 350px; }
+@mixin span-10 { width: 390px; }
+@mixin span-11 { width: 430px; }
+@mixin span-12 { width: 470px; }
+@mixin span-13 { width: 510px; }
+@mixin span-14 { width: 550px; }
+@mixin span-15 { width: 590px; }
+@mixin span-16 { width: 630px; }
+@mixin span-17 { width: 670px; }
+@mixin span-18 { width: 710px; }
+@mixin span-19 { width: 750px; }
+@mixin span-20 { width: 790px; }
+@mixin span-21 { width: 830px; }
+@mixin span-22 { width: 870px; }
+@mixin span-23 { width: 910px; }
+@mixin span-24 { width: 950px; }
+
+/* span */
+
+@mixin column {
+  float: left;
+}
+
+@mixin colborder {
+  padding-right: 24px;
+  margin-right: 25px;
+  border-right: 1px solid #eee;
+}
+
+@mixin last {
+  margin-right: 0;
+}
+
+@mixin space {
+  background: #fff;
+  color: #fff;
+}
+

@@ -5,12 +5,14 @@ section, article, aside, header, footer, nav {
 }
 
 body {
-  max-width: 60em;
+  @include span-24;
   margin: auto;
   line-height: 1.5;
 }
 
-header {
+body > header {
+  @include column;
+  @include span-24;
 /*   @include display-box; */
 /*   @include box-align(center); */
   margin-top: 1em;
@@ -22,6 +24,7 @@ header {
 /*   }; */
   * { margin: 0; }
   h1 {
+    @include span-13;
     @include border-radius(20px);
     @include box-shadow(3px 3px 2px #888888);
     font: {
@@ -38,37 +41,37 @@ header {
   }
 }
 
-  nav {
-/*     position: relative; */
-    top: 160px;
-/*     margin-left: 50px; */
-    padding: 11px 0;
-/*     border-bottom: 1px dashed #b1ad9b; */
-    ul {
-      list-style-type: none;
-      margin-bottom: 0;
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 5px;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 5px;
-/*       text-align: center; */
-      li {
-        padding: 6px 15px;
-        margin: 0 7.5px;
-        display: -moz-inline-box;
-        -moz-box-orient: vertical;
-        display: inline-block;
-        vertical-align: middle;
-        *vertical-align: auto;
-        font: 14px Georgia, Garamond, Times, "Times New Roman", serif;
-        border: 1px solid #cacaca;
-        border-bottom: 3px solid #a0a0a0;
-      }
+header > nav {
+  /*   position: relative; */
+  top: 160px;
+  /*   margin-left: 50px; */
+  padding: 11px 0;
+  /*   border-bottom: 1px dashed #b1ad9b; */
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    /*     text-align: center; */
+    li {
+      padding: 6px 15px;
+      margin: 0 7.5px;
+      display: -moz-inline-box;
+      -moz-box-orient: vertical;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      font: 14px Georgia, Garamond, Times, "Times New Roman", serif;
+      border: 1px solid #cacaca;
+      border-bottom: 3px solid #a0a0a0;
     }
   }
+}
 
 #contents {
   @include column;
@@ -169,11 +172,12 @@ header {
   }
 }
 
-aside {
+body > aside {
   @include column;
   @include span-6;
   @include last;
-  float: right;
+
+/*   float: right; */
   margin-left: 10px;
   width: 203px;
 
@@ -182,6 +186,10 @@ aside {
     background: url(/images/bullet.gif) no-repeat left;
     border-bottom: 1px dashed #a7a7a7;
   }
+}
+
+body > hr {
+  @include space;
 }
 
 footer {

@@ -1,3 +1,5 @@
+@import "mixin-layout";
+
 /* 角丸表示 */
 @mixin border-radius($length) {
   border-radius: $length;
@@ -64,37 +66,3 @@
     clear: both;
   }
 }
-
-/* -- for layout -- */
-
-@mixin column {
-  float: left;
-}
-
-@mixin span-6 {
-  width: 230px;
-}
-
-@mixin span-17 {
-  width: 670px;
-}
-
-@mixin span-24 {
-  width: 950px;
-}
-
-@mixin colborder {
-  padding-right: 24px;
-  margin-right: 25px;
-  border-right: 1px solid #eee;
-}
-
-@mixin last {
-  margin-right: 0;
-}
-
-@mixin space {
-  background: #fff;
-  color: #fff;
-}
-
