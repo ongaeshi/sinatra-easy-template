@@ -73,109 +73,109 @@ header > nav {
   @include colborder;
 
   section {
-    margin: 0 1em;
-    padding-bottom: 0.5em;
+      margin: 0 1em;
+      padding-bottom: 0.5em;
+  }
 
-    h1 {
-      margin: { top: 0.6em; bottom: 0.5em; };
-      font-family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
-      padding-left: 0.4em;
-      background: { color: #ffffff; };
-      border: {
-        bottom-width: 1px;
-        bottom-style: solid;
-        bottom-color: #000000;
-        left-width: 6px;
-        left-style: solid;
-        left-color: black;
+  h1 {
+    margin: { top: 0.6em; bottom: 0.5em; };
+    font-family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
+    padding-left: 0.4em;
+    background: { color: #ffffff; };
+    border: {
+      bottom-width: 1px;
+      bottom-style: solid;
+      bottom-color: #000000;
+      left-width: 6px;
+      left-style: solid;
+      left-color: black;
+    };
+  }
+
+  p {
+    margin: 0.7em auto;
+  }
+
+  dl {
+    margin: 1em;
+    dt {
+      margin: {
+        top: 0.8em;
+        bottom: 0.2em;
       };
+      font-weight: bold;
     }
+    dd {
+      margin-left: 1em;
+    }
+  }
 
-    p {
-      margin: 0.7em auto;
-    }
-
-    dl {
-      margin: 1em;
-      dt {
-        margin: {
-          top: 0.8em;
-          bottom: 0.2em;
-        };
-        font-weight: bold;
-      }
-      dd {
-        margin-left: 1em;
-      }
-    }
-
-    pre {
-      padding: 0.5em 1em;
-      font-size: small;
-      &.blockcode {
-        @include box-shadow(0.2em 0.2em 0.3em gray);
-        border: solid thin gray;
-        white-space: pre-wrap;
-        margin-right: 1em;
-      }
-      &.shell {
-        background-color: black;
-        color: white;
-        margin-right: 1em;
-      }
-    }
-    
-    .note {
-      @include border-radius(4px);
-      border: solid thin silver;
-      background-color: #eeeeee;
+  pre {
+    padding: 0.5em 1em;
+    font-size: small;
+    &.blockcode {
+      @include box-shadow(0.2em 0.2em 0.3em gray);
+      border: solid thin gray;
+      white-space: pre-wrap;
       margin-right: 1em;
-      padding: 0.5em 1em;
-      pre.shell {
-        margin-right: 0em; }
-      &:before {
-        content: "Note:";
-        display: block;
-        font-weight: bold; }
-      *:first-child {
-        margin-top: 0;
+    }
+    &.shell {
+      background-color: black;
+      color: white;
+      margin-right: 1em;
+    }
+  }
+  
+  .note {
+    @include border-radius(4px);
+    border: solid thin silver;
+    background-color: #eeeeee;
+    margin-right: 1em;
+    padding: 0.5em 1em;
+    pre.shell {
+      margin-right: 0em; }
+    &:before {
+      content: "Note:";
+      display: block;
+      font-weight: bold; }
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .side-by-side {
+    @include clearfix;
+    width: 92%;
+    margin: 1.5em auto;
+    pre {
+      @include box-sizing(border-box);
+      float: left;
+      width: 49%;
+      margin-right: 0em;
+      &:first-child {
+        margin-right: 2%;
       }
     }
+  }
 
-    .side-by-side {
-      @include clearfix;
-      width: 92%;
-      margin: 1.5em auto;
-      pre {
-        @include box-sizing(border-box);
-        float: left;
-        width: 49%;
-        margin-right: 0em;
-        &:first-child {
-          margin-right: 2%;
-        }
-      }
-    }
+  .download {
+    @include span-7;
+    @include border-radius(10px);
+    margin: { top: 1.0em; bottom: 1.0em; };
+    padding: { top: 1.0em; bottom: 1.0em; };
+    text-align: center;
+    border: solid gray;
+    background-color: #FAFAFA;
+  }
 
-    .download {
-      @include span-7;
-      @include border-radius(10px);
-      margin: { top: 1.0em; bottom: 1.0em; };
-      padding: { top: 1.0em; bottom: 1.0em; };
-      text-align: center;
-      border: solid gray;
-      background-color: #FAFAFA;
-    }
-
-    .srccode {
-      @include span-5;
-      @include border-radius(10px);
-      margin: { top: 1.0em; bottom: 1.0em; };
-      padding: { top: 1.0em; bottom: 1.0em; };
-      text-align: center;
-      border: solid gray;
-      background-color: #FAFAFA;
-    }
+  .srccode {
+    @include span-5;
+    @include border-radius(10px);
+    margin: { top: 1.0em; bottom: 1.0em; };
+    padding: { top: 1.0em; bottom: 1.0em; };
+    text-align: center;
+    border: solid gray;
+    background-color: #FAFAFA;
   }
 }
 
