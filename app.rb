@@ -49,3 +49,12 @@ get '/hello*' do |path|
   str += "<p>" + "#{hello}" * num + "</p>"
   str
 end
+
+get '/weekday' do
+  wday = Time.new.wday
+  r = []
+  r << "en : #{['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][wday]}"
+  r << "ja : #{['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'][wday]}"
+  r << "fr : #{['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'][wday]}"
+  r.join("<br>")
+end

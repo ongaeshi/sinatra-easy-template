@@ -1,3 +1,5 @@
+- @page_title = 'Demo'
+
 %section
   %h1 #{h '<p>'}
   %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -53,12 +55,12 @@
       %html(lang='ja')
         %head
           %meta(charset='utf-8')
-            %title= [@page_title, 'Sinatra App Template'].compact.join(' - ')
+            %title= [@page_title, 'Sinatra Easy Template'].compact.join(' - ')
             %link(rel='stylesheet' type='text/css'){:href => @stylesheet || 'style.css'}
         %body
           %header
-            %h1 Sinatra-app
-            %p Sinatra-app is minimum app template.
+            %h1 Sinatra Easy Template
+            %p <strong>Sinatra Easy Template</strong> is sintra's very easy template.
       HAML
 
     :blockcode
