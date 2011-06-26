@@ -11,8 +11,8 @@ body {
 }
 
 header {
-  @include display-box;
-  @include box-align(center);
+/*   @include display-box; */
+/*   @include box-align(center); */
   margin-top: 1em;
   padding-bottom: 0.5em;
 /*   border-bottom: { */
@@ -36,10 +36,12 @@ header {
     @include box-flex(1);
     margin-left: 1.5em;
   }
+}
+
   nav {
-    position: relative;
+/*     position: relative; */
     top: 160px;
-    margin-left: 50px;
+/*     margin-left: 50px; */
     padding: 11px 0;
 /*     border-bottom: 1px dashed #b1ad9b; */
     ul {
@@ -52,7 +54,7 @@ header {
       padding-left: 0;
       padding-right: 0;
       padding-top: 5px;
-      text-align: center;
+/*       text-align: center; */
       li {
         padding: 6px 15px;
         margin: 0 7.5px;
@@ -67,7 +69,6 @@ header {
       }
     }
   }
-}
 
 #contents {
   @include column;
