@@ -27,6 +27,7 @@ body > header {
     line-height: 1.1;
     border: 1px solid #000000;
     padding: 0.5em;
+    a { text-decoration:none; }
   }
   p {
     @include box-flex(1);
