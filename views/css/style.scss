@@ -156,6 +156,26 @@ header > nav {
         }
       }
     }
+
+    .download {
+      @include span-7;
+      @include border-radius(10px);
+      margin: { top: 1.0em; bottom: 1.0em; };
+      padding: { top: 1.0em; bottom: 1.0em; };
+      text-align: center;
+      border: solid gray;
+      background-color: #FAFAFA;
+    }
+
+    .srccode {
+      @include span-5;
+      @include border-radius(10px);
+      margin: { top: 1.0em; bottom: 1.0em; };
+      padding: { top: 1.0em; bottom: 1.0em; };
+      text-align: center;
+      border: solid gray;
+      background-color: #FAFAFA;
+    }
   }
 }
 
@@ -168,6 +188,7 @@ body > aside {
   h2 { font-size: 1.0em; }
   h3 { font-size: 0.8em; }
   p { font-size: small; }
+  ul { font-size: small; }
 }
 
 body > hr {
