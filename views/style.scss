@@ -13,15 +13,8 @@ body {
 body > header {
   @include column;
   @include span-24;
-/*   @include display-box; */
-/*   @include box-align(center); */
   margin-top: 1em;
   padding-bottom: 0.5em;
-/*   border-bottom: { */
-/*     width: 1px; */
-/*     style: solid; */
-/*     color: #888888; */
-/*   }; */
   * { margin: 0; }
   h1 {
     @include span-13;
@@ -42,11 +35,11 @@ body > header {
 }
 
 header > nav {
-  /*   position: relative; */
-  top: 160px;
-  /*   margin-left: 50px; */
+  @include column;
+  @include span-24;
+  margin-left: 10px;
   padding: 11px 0;
-  /*   border-bottom: 1px dashed #b1ad9b; */
+  border-bottom: 1px dashed #b1ad9b;
   ul {
     list-style-type: none;
     margin-bottom: 0;
@@ -79,21 +72,14 @@ header > nav {
   @include colborder;
 
   section {
-    /*   @include box-shadow(0.2em 0.2em 0.2em gray); */
-    /*   clear: both; */
     margin: 0 1em;
     padding-bottom: 0.5em;
 
-    h2 {
-      margin: {
-        top: 1.5em;
-        bottom: 0.5em;
-      };
+    h1 {
+      margin: { top: 0.6em; bottom: 0.5em; };
       font-family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
       padding-left: 0.4em;
-      background: {
-        color: #ffffff;
-      };
+      background: { color: #ffffff; };
       border: {
         bottom-width: 1px;
         bottom-style: solid;
@@ -105,6 +91,7 @@ header > nav {
     }
 
     p {
+/*       margin: { top: 0.7em; bottom: 1.7em; }; */
       margin: 0.7em auto;
     }
 
@@ -177,40 +164,27 @@ body > aside {
   @include span-6;
   @include last;
 
-/*   float: right; */
-  margin-left: 10px;
-  width: 203px;
-
-  .link {
-    padding: 12px 6px 12px 52px;
-    background: url(/images/bullet.gif) no-repeat left;
-    border-bottom: 1px dashed #a7a7a7;
-  }
+  h1 { font-size: 1.2em; margin: { bottom: 0.5em; }; }
+  h2 { font-size: 1.0em; }
+  h3 { font-size: 0.8em; }
+  p { font-size: small; }
 }
 
 body > hr {
-  @include space;
+    @include space;
 }
 
-footer {
+body > footer {
   @include column;
   @include span-24;
 
   text-align: right;
   font-size: small;
   color: gray;
-  margin: {
-      top: 3em;
-      bottom: 1em;
-  };
+  margin: { top: 3em; bottom: 1em; };
   * { margin: 0; }
   li { display: inline-block; }
   a { color: inherit; }
-  p {
-    margin: {
-        top: 1em;
-        bottom: 1em;
-    };
-  }
+  p { margin: { top: 1em; bottom: 1em; }; }
 }
 
