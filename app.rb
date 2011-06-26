@@ -36,6 +36,8 @@ get '/*' do |path|
   haml path.to_sym
 end
 
+# -- Sample app (delete OK) -- 
+
 get '/hello*' do |path|
   num = path.to_i
   num = 1 if num == 0
