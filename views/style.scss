@@ -92,7 +92,6 @@ header > nav {
     }
 
     p {
-/*       margin: { top: 0.7em; bottom: 1.7em; }; */
       margin: 0.7em auto;
     }
 
@@ -172,7 +171,8 @@ body > aside {
 }
 
 body > hr {
-    @include space;
+  @include column;
+  @include span-24;
 }
 
 body > footer {
@@ -182,7 +182,7 @@ body > footer {
   text-align: right;
   font-size: small;
   color: gray;
-  margin: { top: 3em; bottom: 1em; };
+  margin: { top: 2em; bottom: 1em; };
   * { margin: 0; }
   li { display: inline-block; }
   a { color: inherit; }
