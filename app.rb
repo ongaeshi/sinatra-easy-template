@@ -8,6 +8,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
+require 'sass'
 
 $LOAD_PATH.unshift 'lib'
 require 'haml/filters/blockcode'
