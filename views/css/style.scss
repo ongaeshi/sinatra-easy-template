@@ -22,7 +22,7 @@ body > header {
     @include border-radius(20px);
     @include box-shadow(3px 3px 2px #888888);
     font: {
-      family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
+      family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐゴシック", serif;
       size: 2.5em;
     };
     line-height: 1.1;
@@ -80,7 +80,7 @@ header > nav {
 
   h1 {
     margin: { top: 0.6em; bottom: 0.5em; };
-    font-family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
+    font-family: "ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐゴシック", serif;
     padding-left: 0.4em;
     background: { color: #ffffff; };
     border: {
