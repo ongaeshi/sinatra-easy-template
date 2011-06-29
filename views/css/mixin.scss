@@ -1,5 +1,6 @@
-@import "mixin-layout";
 @charset "utf-8";
+
+@import "mixin-layout";
 
 /* 角丸表示 */
 @mixin border-radius($length) {
